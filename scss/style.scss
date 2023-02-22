@@ -1,0 +1,435 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.header{
+  &__top{ /*для липкой шапки*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFF;
+    z-index: 10;
+  }
+  &__top-inner{
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content{
+    background-image: url('../images/main-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+  }
+  &__content-inner{
+    bottom: 0;
+    left: 60px;
+    position: absolute;
+  }
+  &__content-descr{
+    position: absolute;
+    bottom: 0;
+  }
+}
+.logo{
+  font-size: 16px;
+  line-height: 19.5px;
+  color: $title;
+  @extend %montserrat-700;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  &__btn{
+    display: none;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+  }
+  &__list-item + .menu__list-item{
+    padding-left: 80px;
+  }
+  &__list-link, &__phone-num{
+    color: $text;
+    line-height: 25.63px;
+    transition: all .3s;
+  }
+  &__list-link:hover,
+  &__phone-num:hover,
+  li:nth-child(4){
+    @extend %montserrat-500;
+  }
+  &__phone{
+    display: flex;
+  }
+  &__phone-icon{
+    margin-left: 236px;
+    margin-right: 17px;
+  }
+}
+
+.cosmetic{
+  background-image: url('../images/cosmetic.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
+  position: relative;
+  &__content-inner{
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+  }
+  &__content-descr{
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.about-us{
+  background-color: $bg;
+  padding: 120px 30px;
+}
+
+.services{
+  &__container{
+      max-width: 800px;
+      padding: 10px 30px 0 130px;
+      margin: 0;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img{
+    min-width: 0;
+    min-height: 0;
+  }
+  &__descr{
+    max-width: 537px;
+  }
+  &__num{
+    font-size: 120px;
+    line-height: 146px;
+    color: $accent;
+    @extend %montserrat-700;
+    margin-bottom: 60px;
+  }
+  &__title{
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: $title;
+    @extend %montserrat-600;
+    margin-bottom: 40px;
+  }
+  &__text{
+    margin-bottom: 60px;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 28.8px;
+  }
+  &__btn{
+    margin-left: 315px;
+  }
+  &__slick-next{
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+
+  right: 0;
+  margin-right: 100px;
+  }
+}
+
+.portfolio{
+  padding-top: 120px;
+  background-color: $bg;
+  &__descr{
+    padding: 0 30px;
+  }
+  &__text{
+    margin-bottom: 120px;
+  }
+  &__filter{
+    text-align: center;
+  }
+  &__btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    font-size: 16px;
+    line-height: 25.6px;
+    @extend %montserrat-500;
+    text-transform: uppercase;
+    color: $title;
+    margin-right: 80px;
+    margin-bottom: 58px;
+    padding-bottom: 4px;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover{
+      color: $accent;
+      border-bottom: 1px solid $accent;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__btn:first-child{
+    @extend %montserrat-600;
+  }
+  &__content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+   
+  }
+  &__images{
+    position: relative;
+    margin: 0 auto;
+    &:hover .portfolio__images-link{
+      opacity: 1;
+    }
+  }
+  &__images-link{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 25.6px;
+    text-transform: uppercase;
+    color: $title;
+    @extend %montserrat-500;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: all .3s;
+  }
+}
+
+.comment{
+  padding: 120px 30px;
+  background: $bg;
+  &__container{
+    padding: 0 20px;
+  }
+  &__title{
+    margin-bottom: 60px;
+  }
+  &__subtitle{
+    margin: 20px 0;
+  }
+  &__text{
+    width: 604px;
+  }
+ &__item{
+  margin-left: 40px;
+ }
+ &__slick-next, &__slick-prev{
+   border: none;
+   background-color: transparent;
+   padding: 0;
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+ }
+ &__slick-prev{
+  margin-left: -115px;
+ }
+ &__slick-next{
+  right: 0;
+  margin-right: -115px;
+ }
+}
+ 
+
+.sale{
+  &__content{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__descr{
+    padding-top: 94px;
+    padding-left: 30px;
+    padding-right: 120px;
+  }
+  &__title{
+    margin-bottom: 20px;
+  }
+  &__subtitle{
+    margin-bottom: 40px;
+  }
+  &__text{
+    width: 475px;
+    margin-bottom: 40px;
+  }
+  &__btn{
+    margin-left: 235px;
+  }
+  &__img{
+    min-width: 0;
+    min-height: 0;
+    /*max-height: 500px;*/
+  }
+}
+.team{
+  padding: 120px 30px;
+  background-color: $bg;
+  &__container{
+    padding: 0 20px;
+  }
+  &__text{
+    margin-bottom: 80px;
+  }
+  &__item + .team__item{
+    margin-left: 20px;
+  }
+  &__item{
+    text-align: center;
+    max-width: 460px;
+    padding: 0 30px;
+  }
+
+  &__item-title{
+    color: $title;
+    text-transform: uppercase;
+    margin: 40px 0 16px;
+  }
+  &__item-text{
+    font-size: 12px;
+    line-height: 19.2px;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 30px;
+  }
+  &__socials{
+    justify-content: center;
+  }
+  &__slick-next, &__slick-prev{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+  }
+  &__slick-prev{
+    margin-left: -115px;
+   }
+   &__slick-next{
+    right: 0;
+    margin-right: -115px;
+   }
+}
+
+.request{
+  padding: 120px 30px;
+  &__title{
+    margin-bottom: 20px;
+  }
+  &__form{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 60px;
+  }
+  &__form-inf{
+    border: none;
+    border-bottom: 1px solid $accent;
+    outline: none;
+    width: 340px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+  }
+  &__btn{
+    color: #fff;
+    font-size: 12px;
+    line-height: 22.4px;
+    text-transform: uppercase;
+    @extend %montserrat-500;
+    border: none;
+    background: $accent;
+    padding: 21px 75px;
+    cursor: pointer;
+  }
+}
+
+.contact{
+  background-color: $bg;
+  padding: 120px 30px;
+  &__title{
+    margin-bottom: 63px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__icon{
+    margin: 0 auto;
+    margin-bottom: 18px;
+  }
+  &__link{
+    text-transform: uppercase;
+    color: $title;
+    @extend %montserrat-500;
+  }
+}
+
+.footer{
+  padding: 120px 30px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 27.3px;
+    margin: 27px 0 75px;
+    width: 450px;
+  }
+  &__items{
+    display: flex;
+  }
+  &__item + .footer__item{
+    margin-left: 102px;
+  }
+  &__item-title{
+    font-size: 22px;
+    line-height: 27px;
+    color: $title;
+    @extend %montserrat-500;
+    margin-bottom: 24px;
+  }
+  &__list-link{
+    font-size: 18px;
+    line-height: 35px;
+    color: $text;
+  }
+  &__list{
+    margin-top: 8px;
+  }
+}
+
+
+@import 'media';
