@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Салон красоты - Fashion Style</title>
-  <meta name="descrition" content="Салон красоты Fashion Style предоставляет широкий спектр услуг: парикмахерские услуги, ногтевой сервис, услуги косметолога, брови и ресницы. Профессиональные мастера с опытом и постоянным повышением квалификации">
+  <title>Fashion Style</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -38,7 +38,7 @@
       
  <div class="header__content">
     <div class="container">
-      <div class="header__content-inner">
+      <div class="header__content-inner" data-aos="fade-down" data-aos-duration="1300">
         <img class="square__content-img" src="images/square-1.jpg" alt="">
         <div class="header__content-descr ">
           <p class="square__content-text header__content-text">Все услуги в одном месте. Парихмахерская. Маникюр и педикюр. Косметология</p>
@@ -51,7 +51,7 @@
 
 <section class="cosmetic">
   <div class="container">
-      <div class="cosmetic__content-inner">
+      <div class="cosmetic__content-inner" data-aos="fade-down" data-aos-duration="1300">
         <img class="square__content-img cosmetic__content-img" src="images/square-2.jpg" alt="">
         <div class="cosmetic__content-descr">
           <p class="square__content-text cosmetic__content-text">Органическая косметика в уходе за вашим телом. Создано самой природой.</p>
@@ -499,6 +499,12 @@
 </footer>
 
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+  });
+  </script>
   <script src="js/slick.min.js"></script> <!--плагин для слайдера-->
   <script src="js/main.min.js"></script>
 </body>
