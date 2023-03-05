@@ -77,3 +77,7 @@ $(function(){
   var mixer = mixitup('.portfolio__content');
 
 });
+
+AOS.init({
+  once: true,
+});
